@@ -1,0 +1,194 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html, body, #root { min-height: 100%; }
+html { background: #2b2117; overscroll-behavior: none; }
+body {
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  background: #ffecd2;
+  min-height: 100dvh;
+  overflow-x: hidden;
+  -webkit-text-size-adjust: 100%;
+}
+button, input { font: inherit; }
+button:disabled { opacity: 0.6; cursor: not-allowed; }
+@keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+@keyframes pop { from { transform: scale(0.7); } to { transform: scale(1); } }
+@keyframes fadeout { 0%, 70% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+@keyframes look-pulse {
+  0%, 100% { transform: scale(1); filter: brightness(1); }
+  50% { transform: scale(1.09); filter: brightness(1.12); }
+}
+@keyframes confetti-fall {
+  0% { transform: translateY(-15vh) rotate(0deg); opacity: 1; }
+  100% { transform: translateY(115vh) rotate(720deg); opacity: 0.15; }
+}
+@keyframes reunion-zoom {
+  0%, 100% { transform: scale(1.015); filter: saturate(0.98) brightness(0.98); }
+  50% { transform: scale(1.12); filter: saturate(1.1) brightness(1.04); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .reunion-photo { animation: none !important; }
+}
+@keyframes world-drift {
+  from { transform: translate3d(0, -12vh, 0) rotate(0deg); opacity: 0; }
+  15% { opacity: 0.55; }
+  85% { opacity: 0.45; }
+  to { transform: translate3d(36px, 112vh, 0) rotate(300deg); opacity: 0; }
+}
+.world-effects { position: absolute; inset: 0; z-index: 3; overflow: hidden; pointer-events: none; }
+.world-effects span {
+  position: absolute; top: -30px; color: #f6ca77; font-size: 20px;
+  text-shadow: 0 2px 5px rgba(73,40,13,0.35); animation: world-drift 8s linear infinite;
+}
+.world-effects .world-leaf::before { content: '🍂'; }
+.world-effects .world-speck::before { content: '·'; }
+.world-effects-moon span {
+  color: #bfeaff; text-shadow: 0 0 9px rgba(133,220,255,0.85);
+  animation-direction: reverse; animation-timing-function: ease-in-out;
+}
+.world-effects .world-star::before { content: '✦'; }
+.world-effects .world-orb::before { content: '·'; }
+.adventure-card:hover { transform: translateY(-4px); box-shadow: 0 14px 32px rgba(64,37,24,0.3) !important; }
+.adventure-card:hover img { transform: scale(1.04); }
+
+@media (max-width: 600px) {
+  .audio-label { display: none; }
+  .audio-button { width: 42px; height: 42px; padding: 0 !important; }
+
+  .title-screen {
+    align-items: flex-start !important;
+    min-height: 100dvh !important;
+    padding: max(12px, env(safe-area-inset-top)) 12px max(18px, env(safe-area-inset-bottom)) !important;
+  }
+  .title-card { border-radius: 22px !important; padding: 22px 16px !important; }
+  .title-brand-row { gap: 10px !important; margin-bottom: 18px !important; }
+  .title-brand-row > div:first-child { font-size: 48px !important; }
+  .title-brand-row h1 { font-size: clamp(27px, 9vw, 34px) !important; }
+  .title-subtitle { white-space: normal !important; max-width: 250px; }
+  .title-preset-grid { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; gap: 9px !important; }
+  .title-preset-card:last-child:nth-child(odd) { grid-column: 1 / -1; }
+  .title-preset-card { height: 158px !important; border-radius: 15px !important; }
+  .title-custom-row { flex-direction: column !important; }
+  .title-custom-row button { width: 100%; min-height: 48px; }
+  .title-browse-button { min-height: 64px; }
+  .adventure-browser { padding: max(15px, env(safe-area-inset-top)) 11px max(40px, env(safe-area-inset-bottom)) !important; }
+  .adventure-global-grid { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; gap: 10px !important; }
+  .adventure-card { height: 245px !important; border-radius: 16px !important; }
+  .adventure-card-compact { height: 220px !important; }
+  .adventure-past-row { grid-auto-columns: minmax(220px, 76vw) !important; }
+
+  .game-shell { height: 100dvh !important; min-height: 100dvh !important; }
+  .game-top-controls {
+    top: max(10px, env(safe-area-inset-top)) !important;
+    left: max(10px, env(safe-area-inset-left)) !important;
+  }
+  .game-top-controls button { width: 46px !important; height: 46px !important; }
+  .game-audio-panel {
+    top: calc(max(10px, env(safe-area-inset-top)) + 54px) !important;
+    left: max(10px, env(safe-area-inset-left)) !important;
+    max-height: calc(100dvh - 86px - env(safe-area-inset-bottom)) !important;
+    overflow-y: auto;
+  }
+  .game-exit-button {
+    top: calc(max(10px, env(safe-area-inset-top)) + 62px) !important;
+    left: max(10px, env(safe-area-inset-left)) !important;
+    min-height: 42px;
+    padding: 8px 12px !important;
+  }
+  .hint-tracker:not(.hint-tracker-embedded) {
+    top: max(10px, env(safe-area-inset-top)) !important;
+    right: max(10px, env(safe-area-inset-right)) !important;
+    width: min(236px, calc(100vw - 126px)) !important;
+    padding: 8px !important;
+  }
+  .hint-tracker:not(.hint-tracker-embedded) > button { font-size: 14px !important; gap: 5px !important; }
+  .touch-mode .game-controls-legend { display: none !important; }
+  .game-action-button {
+    right: max(12px, env(safe-area-inset-right)) !important;
+    bottom: max(18px, env(safe-area-inset-bottom)) !important;
+    max-width: min(47vw, 220px);
+    min-height: 58px;
+    padding: 13px 18px !important;
+    font-size: 16px !important;
+    line-height: 1.1;
+  }
+  .game-toast {
+    bottom: calc(max(18px, env(safe-area-inset-bottom)) + 178px) !important;
+    width: calc(100vw - 24px);
+    max-width: 520px !important;
+    padding: 10px 14px !important;
+    font-size: 14px !important;
+  }
+  .game-picker-button {
+    bottom: calc(max(18px, env(safe-area-inset-bottom)) + 178px) !important;
+    width: min(300px, calc(100vw - 28px));
+  }
+  .game-mama-mission {
+    top: calc(max(10px, env(safe-area-inset-top)) + 58px) !important;
+    max-width: calc(100vw - 24px);
+    white-space: normal !important;
+    text-align: center;
+    font-size: 12px !important;
+  }
+
+  .intro-overlay { padding: max(12px, env(safe-area-inset-top)) 12px max(12px, env(safe-area-inset-bottom)) !important; }
+  .intro-card { width: 100% !important; max-height: calc(100dvh - 24px - env(safe-area-inset-top) - env(safe-area-inset-bottom)) !important; padding: 22px 18px !important; border-radius: 22px !important; }
+
+  .dialogue-overlay {
+    padding: 8px 8px max(8px, env(safe-area-inset-bottom)) !important;
+    background: linear-gradient(to top, rgba(35,24,18,0.42), transparent 72%) !important;
+  }
+  .dialogue-panel {
+    width: 100% !important;
+    max-height: min(76dvh, 650px) !important;
+    padding: 11px 12px 12px !important;
+    gap: 7px !important;
+    border-radius: 18px !important;
+  }
+  .dialogue-panel-compact { max-height: 62dvh !important; }
+  .dialogue-header { align-items: flex-start !important; gap: 7px !important; }
+  .dialogue-header-actions { gap: 5px !important; flex-wrap: wrap; justify-content: flex-end; }
+  .dialogue-header-actions button:first-child { padding: 7px 8px !important; font-size: 0 !important; }
+  .dialogue-header-actions button:first-child::after { content: '↕'; font-size: 16px; }
+  .dialogue-header-actions button:last-child { padding: 9px 10px !important; font-size: 11px !important; }
+  .dialogue-transcript { max-height: 138px !important; min-height: 48px !important; }
+  .dialogue-transcript > div { padding: 8px 10px !important; font-size: 14px !important; }
+  .dialogue-suggestions { grid-template-columns: 1fr !important; gap: 6px !important; overflow-y: auto; }
+  .dialogue-suggestions button { min-height: 44px; padding: 9px 10px !important; }
+  .dialogue-input-row input { min-height: 46px; font-size: 16px !important; }
+  .dialogue-input-row button { width: 46px !important; height: 46px !important; flex-basis: 46px !important; }
+
+  .location-picker-overlay, .reunion-overlay { padding: max(8px, env(safe-area-inset-top)) 8px max(8px, env(safe-area-inset-bottom)) !important; }
+  .quest-brief-overlay { padding: max(10px, env(safe-area-inset-top)) 10px max(10px, env(safe-area-inset-bottom)) !important; }
+  .quest-brief-card { width: 100% !important; max-height: calc(100dvh - 20px - env(safe-area-inset-top) - env(safe-area-inset-bottom)) !important; padding: 23px 18px !important; }
+  .location-picker-card, .reunion-card {
+    width: 100% !important;
+    max-height: calc(100dvh - 16px - env(safe-area-inset-top) - env(safe-area-inset-bottom)) !important;
+    padding: 22px 15px !important;
+    border-radius: 20px !important;
+  }
+  .location-picker-grid { gap: 8px !important; }
+  .location-picker-grid button { min-height: 128px; padding: 7px !important; }
+}
+
+@media (max-width: 350px) {
+  .title-preset-grid { grid-template-columns: 1fr !important; }
+  .title-preset-card { height: 170px !important; }
+  .hint-tracker:not(.hint-tracker-embedded) { width: calc(100vw - 122px) !important; }
+  .adventure-global-grid { grid-template-columns: 1fr !important; }
+  .adventure-card { height: 265px !important; }
+}
+
+@media (min-width: 601px) and (max-width: 980px) {
+  .adventure-global-grid { grid-template-columns: repeat(3, minmax(0, 1fr)) !important; }
+}
+
+@media (max-height: 500px) and (orientation: landscape) {
+  .game-action-button { bottom: max(12px, env(safe-area-inset-bottom)) !important; min-height: 52px; }
+  .game-toast { bottom: 74px !important; max-width: 52vw !important; }
+  .dialogue-panel { max-height: calc(100dvh - 12px) !important; }
+  .dialogue-transcript { max-height: 88px !important; }
+  .dialogue-suggestions { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+  .intro-card { max-width: 620px !important; padding: 16px 22px !important; }
+  .intro-card > div:nth-child(4) { grid-template-columns: repeat(3, 1fr); max-width: none !important; }
+}

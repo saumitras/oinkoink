@@ -1,0 +1,749 @@
+{
+  "id": "cjfwNIfLt411ZZKDOC0Qo",
+  "idea": "a toy shop on clouds",
+  "createdAt": "2026-07-19T11:35:48.298376+00:00",
+  "status": "playable",
+  "stages": {
+    "bible": "done",
+    "street": "done",
+    "outline": "done",
+    "hotspots": "done",
+    "character": "done",
+    "npc_openers": "done",
+    "tts": "done",
+    "room_toy-balloons": "done",
+    "room_music-hum": "done",
+    "room_cookie-train": "done"
+  },
+  "bible": {
+    "title": "Oink Oink Lost: Cloud Toy Shop",
+    "setting": {
+      "name": "Cloud Toy Shop",
+      "description": "A cozy toy shop floating on soft clouds, with tiny stairways, round windows, and shelves full of cheerful playthings.",
+      "decorations": [
+        "puffy cloud walkways",
+        "wind-up toy displays",
+        "ribbon bunting",
+        "round glass windows",
+        "floating signboards",
+        "soft bell chimes"
+      ]
+    },
+    "player": {
+      "description": "A tiny baby pig with a round snout and bright curious eyes, wearing a little red scarf.",
+      "accessory": "red scarf"
+    },
+    "narratorIntro": "Piglet bounced onto a cloud and found a toy shop full of giggles. Mama Pig is nearby somewhere in the shop world, and three friendly neighbors have hints to help Piglet find her.",
+    "buildings": [
+      {
+        "id": "toy-balloons",
+        "name": "Balloon Loft",
+        "exteriorDescription": "A round cloud doorway tied with balloon strings and a dangling toy kite.",
+        "sizeHint": "small",
+        "isEnterable": true,
+        "interiorDescription": "A bright little room with bouncing balloons and stacked toy boxes.",
+        "npcId": "npc-parrot"
+      },
+      {
+        "id": "music-hum",
+        "name": "Music Nook",
+        "exteriorDescription": "A curved cloud alcove with tiny bells hanging from the arch.",
+        "sizeHint": "small",
+        "isEnterable": true,
+        "interiorDescription": "A gentle room of music boxes, chimes, and soft humming shelves.",
+        "npcId": "npc-bunny"
+      },
+      {
+        "id": "cookie-train",
+        "name": "Cookie Train Counter",
+        "exteriorDescription": "A shiny counter shaped like a toy train, with sweet-cookie jars beside it.",
+        "sizeHint": "medium",
+        "isEnterable": true,
+        "interiorDescription": "A cheerful counter room filled with toy trains, cookie tins, and ribbon tags.",
+        "npcId": "npc-bear"
+      },
+      {
+        "id": "cloud-stairs",
+        "name": "Cloud Stairs",
+        "exteriorDescription": "A floating stairway curling upward between fluffy cloud posts.",
+        "sizeHint": "medium",
+        "isEnterable": false,
+        "interiorDescription": null,
+        "npcId": null
+      },
+      {
+        "id": "rainbow-bridge",
+        "name": "Rainbow Bridge",
+        "exteriorDescription": "A bright arched bridge made of painted cloud planks.",
+        "sizeHint": "large",
+        "isEnterable": false,
+        "interiorDescription": null,
+        "npcId": null
+      },
+      {
+        "id": "toy-window",
+        "name": "Toy Window Display",
+        "exteriorDescription": "A sparkling shop window full of spinning tops and tin stars.",
+        "sizeHint": "small",
+        "isEnterable": false,
+        "interiorDescription": null,
+        "npcId": null
+      }
+    ],
+    "npcs": [
+      {
+        "id": "npc-parrot",
+        "name": "Pippa",
+        "species": "parrot",
+        "appearance": "A green parrot with a red bow tie and shiny feathers.",
+        "personality": "Chatty, helpful, and cheerful.",
+        "roomPosition": "left",
+        "ttsVoice": "alloy",
+        "lines": {
+          "greeting": "Hiya, Piglet!",
+          "hint": "I am sure Mama did not stop at Balloon Loft.",
+          "idle": "Pretty clouds, pretty toys!"
+        },
+        "conversation": {
+          "speechStyle": "chirpy and quick",
+          "favoriteTopic": "buttons and shiny toy parts",
+          "smallTalkFacts": [
+            "The shop hangs in the clouds.",
+            "Bells ring when the wind blows.",
+            "Toy kites hang near the windows."
+          ],
+          "openingChoices": [
+            "Do you like toy kites?",
+            "What is that shiny box?",
+            "Did you see Mama Pig?"
+          ],
+          "clueLeadIn": "I noticed something useful!",
+          "animalSound": "Squawk"
+        }
+      },
+      {
+        "id": "npc-bunny",
+        "name": "Bobo",
+        "species": "bunny",
+        "appearance": "A white bunny with long ears and a teal apron.",
+        "personality": "Soft-spoken, kind, and tidy.",
+        "roomPosition": "center",
+        "ttsVoice": "echo",
+        "lines": {
+          "greeting": "Hello there, Piglet.",
+          "hint": "I am sure Mama did not stop at Music Nook.",
+          "idle": "I like quiet shelves."
+        },
+        "conversation": {
+          "speechStyle": "soft and bouncy",
+          "favoriteTopic": "music boxes",
+          "smallTalkFacts": [
+            "Music boxes sit on the middle shelves.",
+            "The floor is made of smooth cloud planks.",
+            "Little bells tinkle in the breeze."
+          ],
+          "openingChoices": [
+            "Can you show me the bells?",
+            "What toys are here?",
+            "Did Mama come by?"
+          ],
+          "clueLeadIn": "I remember one clue.",
+          "animalSound": "Sniff-sniff"
+        }
+      },
+      {
+        "id": "npc-bear",
+        "name": "Bruno",
+        "species": "bear",
+        "appearance": "A brown bear with round glasses and a striped vest.",
+        "personality": "Slow, warm, and very patient.",
+        "roomPosition": "right",
+        "ttsVoice": "fable",
+        "lines": {
+          "greeting": "Hello, little one.",
+          "hint": "I am sure Mama did not stop at Cloud Stairs.",
+          "idle": "I love tidy jars."
+        },
+        "conversation": {
+          "speechStyle": "slow and cozy",
+          "favoriteTopic": "cookie tins and toy trains",
+          "smallTalkFacts": [
+            "Cookie jars sit by the counter.",
+            "Tiny trains circle on a display track.",
+            "Ribbon tags hang from new toys."
+          ],
+          "openingChoices": [
+            "What is in the jars?",
+            "Do trains go choo-choo here?",
+            "Did Mama stop at this counter?"
+          ],
+          "clueLeadIn": "I heard one helpful thing.",
+          "animalSound": "Grr-hmm"
+        }
+      }
+    ],
+    "hints": [
+      {
+        "id": "hint-attribute",
+        "npcId": "npc-parrot",
+        "kind": "attribute",
+        "text": "I am sure Mama did not stop at Balloon Loft.",
+        "eliminatesLocationIds": [
+          "toy-balloons"
+        ]
+      },
+      {
+        "id": "hint-direction",
+        "npcId": "npc-bunny",
+        "kind": "direction",
+        "text": "I am sure Mama did not stop at Music Nook.",
+        "eliminatesLocationIds": [
+          "music-hum"
+        ]
+      },
+      {
+        "id": "hint-object",
+        "npcId": "npc-bear",
+        "kind": "object",
+        "text": "I am sure Mama did not stop at Cloud Stairs.",
+        "eliminatesLocationIds": [
+          "cloud-stairs"
+        ]
+      }
+    ],
+    "candidateLocations": [
+      {
+        "id": "toy-balloons",
+        "name": "Balloon Loft",
+        "emoji": "\ud83c\udf88",
+        "description": "A bouncy loft where toy balloons bob near the ceiling.",
+        "clueFacts": {
+          "attribute": "Mama went somewhere that smells like fresh ribbon.",
+          "direction": "Mama went beside the west window.",
+          "object": "Mama went with a toy kite on the wall."
+        }
+      },
+      {
+        "id": "music-hum",
+        "name": "Music Nook",
+        "emoji": "\ud83c\udfb5",
+        "description": "A quiet nook of music boxes and little bells.",
+        "clueFacts": {
+          "attribute": "Mama went somewhere that smells like warm cookies.",
+          "direction": "Mama went beside the east arch.",
+          "object": "Mama went with a spinning top shelf."
+        }
+      },
+      {
+        "id": "cookie-train",
+        "name": "Cookie Train Counter",
+        "emoji": "\ud83d\ude82",
+        "description": "A shiny toy-train counter with cookie jars and ribbon tags.",
+        "clueFacts": {
+          "attribute": "Mama went somewhere that smells like warm cookies.",
+          "direction": "Mama went beside the south stairs.",
+          "object": "Mama went with the shiny train counter."
+        }
+      },
+      {
+        "id": "cloud-stairs",
+        "name": "Cloud Stairs",
+        "emoji": "\ud83e\ude9c",
+        "description": "A floating stairway curling between fluffy cloud posts.",
+        "clueFacts": {
+          "attribute": "Mama went somewhere that smells like fresh ribbon.",
+          "direction": "Mama went beside the cloud stairs.",
+          "object": "Mama went with a toy kite on the wall."
+        }
+      }
+    ],
+    "finalLocationId": "cookie-train",
+    "finalLocationBuildingId": "cookie-train",
+    "reunionLine": "Mama Pig is here at the Cookie Train Counter! Piglet found her by matching all three clues.",
+    "verification": "Each clue rules out one wrong place; only Cookie Train Counter remains.",
+    "visualDirection": {
+      "layout": "mixed_hub",
+      "architecture": "A dreamy cloud mall with one open central floor and three cozy shop rooms connected by short floating paths. Round doorways, candy-colored counters, and soft cloud stair rails make the shop feel playful and airy.",
+      "palette": [
+        "powder blue",
+        "cotton white",
+        "butter yellow",
+        "bubblegum pink",
+        "mint green",
+        "gold"
+      ],
+      "lighting": "Soft glowing daylight filtered through cloud windows, with twinkly reflections on glass and metal toys.",
+      "atmosphere": "Cozy, whimsical, gently magical, and playful, like a favorite toy aisle in the sky.",
+      "walkableSurface": "Puffy cloud floors with smooth painted planks at the shop thresholds.",
+      "imageStyle": "Storybook illustration with clean shapes, soft textures, and bright child-friendly details.",
+      "avoid": [
+        "dark horror shadows",
+        "gloomy storm clouds",
+        "realistic danger",
+        "sharp edges",
+        "messy clutter",
+        "scary faces"
+      ]
+    }
+  },
+  "assets": {
+    "streetUrl": "/assets/games/cjfwNIfLt411ZZKDOC0Qo/street.png",
+    "outlineUrl": "/assets/games/cjfwNIfLt411ZZKDOC0Qo/outline.png",
+    "characterFrontUrl": "/assets/games/cjfwNIfLt411ZZKDOC0Qo/char_front.png",
+    "characterSideUrl": "/assets/games/cjfwNIfLt411ZZKDOC0Qo/char_side.png",
+    "rooms": {
+      "toy-balloons": {
+        "imageUrl": "/assets/games/cjfwNIfLt411ZZKDOC0Qo/room_toy-balloons.png",
+        "annotation": {
+          "npcBox": {
+            "x": 110.0,
+            "y": 409.0,
+            "w": 201.0,
+            "h": 317.0
+          },
+          "exit": {
+            "x": 522.0,
+            "y": 970.0
+          }
+        }
+      },
+      "music-hum": {
+        "imageUrl": "/assets/games/cjfwNIfLt411ZZKDOC0Qo/room_music-hum.png",
+        "annotation": {
+          "npcBox": {
+            "x": 427.0,
+            "y": 466.0,
+            "w": 153.0,
+            "h": 250.0
+          },
+          "exit": {
+            "x": 513.0,
+            "y": 1002.0
+          }
+        }
+      },
+      "cookie-train": {
+        "imageUrl": "/assets/games/cjfwNIfLt411ZZKDOC0Qo/room_cookie-train.png",
+        "annotation": {
+          "npcBox": {
+            "x": 660.0,
+            "y": 364.0,
+            "w": 171.0,
+            "h": 331.0
+          },
+          "exit": {
+            "x": 512.0,
+            "y": 956.0
+          }
+        }
+      }
+    },
+    "audio": {
+      "npc_npc-parrot.hint": "/assets/games/cjfwNIfLt411ZZKDOC0Qo/audio/hint_npc-parrot_dbeee671288b6678.mp3",
+      "npc_npc-bear.hint": "/assets/games/cjfwNIfLt411ZZKDOC0Qo/audio/hint_npc-bear_652a85a2d07e35a2.mp3",
+      "npc_npc-bunny.hint": "/assets/games/cjfwNIfLt411ZZKDOC0Qo/audio/hint_npc-bunny_99ed9f3475a02dee.mp3",
+      "npc_npc-bunny.idle": "/assets/games/cjfwNIfLt411ZZKDOC0Qo/audio/idle_npc-bunny_baa3054327b229fd.mp3",
+      "npc_npc-parrot.idle": "/assets/games/cjfwNIfLt411ZZKDOC0Qo/audio/idle_npc-parrot_e0ad33846d62c7f9.mp3",
+      "npc_npc-bear.idle": "/assets/games/cjfwNIfLt411ZZKDOC0Qo/audio/idle_npc-bear_35268e2c586ab152.mp3",
+      "narrator.allHints": "/assets/games/cjfwNIfLt411ZZKDOC0Qo/audio/narrator.allHints.mp3",
+      "narrator.reunion": "/assets/games/cjfwNIfLt411ZZKDOC0Qo/audio/narrator.reunion.mp3",
+      "building_rainbow-bridge.look": "/assets/games/cjfwNIfLt411ZZKDOC0Qo/audio/building_rainbow-bridge.look.mp3",
+      "building_toy-window.look": "/assets/games/cjfwNIfLt411ZZKDOC0Qo/audio/building_toy-window.look.mp3",
+      "building_cloud-stairs.look": "/assets/games/cjfwNIfLt411ZZKDOC0Qo/audio/building_cloud-stairs.look.mp3",
+      "narrator.intro": "/assets/games/cjfwNIfLt411ZZKDOC0Qo/audio/narrator.intro.mp3",
+      "npc_npc-parrot.greeting": "/assets/games/cjfwNIfLt411ZZKDOC0Qo/audio/opener_npc-parrot_cfe62d26dd3bec81.mp3",
+      "npc_npc-bunny.greeting": "/assets/games/cjfwNIfLt411ZZKDOC0Qo/audio/opener_npc-bunny_c398794cba1803af.mp3",
+      "npc_npc-bear.greeting": "/assets/games/cjfwNIfLt411ZZKDOC0Qo/audio/opener_npc-bear_6252decc1a6a1e18.mp3"
+    },
+    "npcOpeners": {
+      "npc-parrot": {
+        "reply": "Squawk-hiya, Piglet!",
+        "suggestedReplies": [
+          {
+            "text": "Do you like toy kites?",
+            "intent": "small_talk"
+          },
+          {
+            "text": "What is that shiny box?",
+            "intent": "small_talk"
+          },
+          {
+            "text": "Have you seen my Mama?",
+            "intent": "ask_mama"
+          }
+        ],
+        "mood": "cheerful",
+        "conversationComplete": false,
+        "audioUrl": "/assets/games/cjfwNIfLt411ZZKDOC0Qo/audio/opener_npc-parrot_cfe62d26dd3bec81.mp3"
+      },
+      "npc-bear": {
+        "reply": "Grr-hmm-hello, little one.",
+        "suggestedReplies": [
+          {
+            "text": "What is in the jars?",
+            "intent": "small_talk"
+          },
+          {
+            "text": "Do trains go choo-choo here?",
+            "intent": "small_talk"
+          },
+          {
+            "text": "Have you seen my Mama?",
+            "intent": "ask_mama"
+          }
+        ],
+        "mood": "cheerful",
+        "conversationComplete": false,
+        "audioUrl": "/assets/games/cjfwNIfLt411ZZKDOC0Qo/audio/opener_npc-bear_6252decc1a6a1e18.mp3"
+      },
+      "npc-bunny": {
+        "reply": "Sniff-sniff-hello there, Piglet.",
+        "suggestedReplies": [
+          {
+            "text": "Can you show me the bells?",
+            "intent": "small_talk"
+          },
+          {
+            "text": "What toys are here?",
+            "intent": "small_talk"
+          },
+          {
+            "text": "Have you seen my Mama?",
+            "intent": "ask_mama"
+          }
+        ],
+        "mood": "cheerful",
+        "conversationComplete": false,
+        "audioUrl": "/assets/games/cjfwNIfLt411ZZKDOC0Qo/audio/opener_npc-bunny_c398794cba1803af.mp3"
+      }
+    },
+    "npcMamaReplies": {
+      "npc-parrot": {
+        "reply": "I noticed something useful! Squawk! Mama didn't stop at Balloon Loft. I'm sure of that.",
+        "suggestedReplies": [
+          {
+            "text": "Tell me about buttons and shiny toy parts.",
+            "intent": "small_talk"
+          },
+          {
+            "text": "Thank you!",
+            "intent": "goodbye"
+          }
+        ],
+        "mood": "helpful",
+        "conversationComplete": false,
+        "audioUrl": "/assets/games/cjfwNIfLt411ZZKDOC0Qo/audio/mama_toy-balloons_npc-parrot_f8e1873edd57b050.mp3"
+      },
+      "npc-bear": {
+        "reply": "I heard one helpful thing. Grr-hmm\u2026 Mama didn't stop at Cloud Stairs. I'm sure of that.",
+        "suggestedReplies": [
+          {
+            "text": "Tell me about cookie tins and toy trains.",
+            "intent": "small_talk"
+          },
+          {
+            "text": "Thank you!",
+            "intent": "goodbye"
+          }
+        ],
+        "mood": "helpful",
+        "conversationComplete": false,
+        "audioUrl": "/assets/games/cjfwNIfLt411ZZKDOC0Qo/audio/mama_cloud-stairs_npc-bear_b5a5791946d919d9.mp3"
+      },
+      "npc-bunny": {
+        "reply": "I remember one clue. Sniff-sniff! Mama didn't stop at Music Nook. I'm sure of that.",
+        "suggestedReplies": [
+          {
+            "text": "Tell me about music boxes.",
+            "intent": "small_talk"
+          },
+          {
+            "text": "Thank you!",
+            "intent": "goodbye"
+          }
+        ],
+        "mood": "helpful",
+        "conversationComplete": false,
+        "audioUrl": "/assets/games/cjfwNIfLt411ZZKDOC0Qo/audio/mama_music-hum_npc-bunny_1e118210ab1bfa2a.mp3"
+      }
+    },
+    "npcMamaReplyVariants": {
+      "npc-parrot:toy-balloons": {
+        "reply": "I noticed something useful! Squawk! Mama didn't stop at Balloon Loft. I'm sure of that.",
+        "suggestedReplies": [
+          {
+            "text": "Tell me about buttons and shiny toy parts.",
+            "intent": "small_talk"
+          },
+          {
+            "text": "Thank you!",
+            "intent": "goodbye"
+          }
+        ],
+        "mood": "helpful",
+        "conversationComplete": false,
+        "audioUrl": "/assets/games/cjfwNIfLt411ZZKDOC0Qo/audio/mama_toy-balloons_npc-parrot_f8e1873edd57b050.mp3"
+      },
+      "npc-parrot:music-hum": {
+        "reply": "I noticed something useful! Squawk! Mama didn't stop at Music Nook. I'm sure of that.",
+        "suggestedReplies": [
+          {
+            "text": "Tell me about buttons and shiny toy parts.",
+            "intent": "small_talk"
+          },
+          {
+            "text": "Thank you!",
+            "intent": "goodbye"
+          }
+        ],
+        "mood": "helpful",
+        "conversationComplete": false,
+        "audioUrl": "/assets/games/cjfwNIfLt411ZZKDOC0Qo/audio/mama_music-hum_npc-parrot_20f4641fa6e1724b.mp3"
+      },
+      "npc-parrot:cookie-train": {
+        "reply": "I noticed something useful! Squawk! Mama didn't stop at Cookie Train Counter. I'm sure of that.",
+        "suggestedReplies": [
+          {
+            "text": "Tell me about buttons and shiny toy parts.",
+            "intent": "small_talk"
+          },
+          {
+            "text": "Thank you!",
+            "intent": "goodbye"
+          }
+        ],
+        "mood": "helpful",
+        "conversationComplete": false,
+        "audioUrl": "/assets/games/cjfwNIfLt411ZZKDOC0Qo/audio/mama_cookie-train_npc-parrot_8e79a3be4e3d928b.mp3"
+      },
+      "npc-parrot:cloud-stairs": {
+        "reply": "I noticed something useful! Squawk! Mama didn't stop at Cloud Stairs. I'm sure of that.",
+        "suggestedReplies": [
+          {
+            "text": "Tell me about buttons and shiny toy parts.",
+            "intent": "small_talk"
+          },
+          {
+            "text": "Thank you!",
+            "intent": "goodbye"
+          }
+        ],
+        "mood": "helpful",
+        "conversationComplete": false,
+        "audioUrl": "/assets/games/cjfwNIfLt411ZZKDOC0Qo/audio/mama_cloud-stairs_npc-parrot_f597c1196dc46a46.mp3"
+      },
+      "npc-bunny:toy-balloons": {
+        "reply": "I remember one clue. Sniff-sniff! Mama didn't stop at Balloon Loft. I'm sure of that.",
+        "suggestedReplies": [
+          {
+            "text": "Tell me about music boxes.",
+            "intent": "small_talk"
+          },
+          {
+            "text": "Thank you!",
+            "intent": "goodbye"
+          }
+        ],
+        "mood": "helpful",
+        "conversationComplete": false,
+        "audioUrl": "/assets/games/cjfwNIfLt411ZZKDOC0Qo/audio/mama_toy-balloons_npc-bunny_48ddd14b66e0644e.mp3"
+      },
+      "npc-bunny:music-hum": {
+        "reply": "I remember one clue. Sniff-sniff! Mama didn't stop at Music Nook. I'm sure of that.",
+        "suggestedReplies": [
+          {
+            "text": "Tell me about music boxes.",
+            "intent": "small_talk"
+          },
+          {
+            "text": "Thank you!",
+            "intent": "goodbye"
+          }
+        ],
+        "mood": "helpful",
+        "conversationComplete": false,
+        "audioUrl": "/assets/games/cjfwNIfLt411ZZKDOC0Qo/audio/mama_music-hum_npc-bunny_1e118210ab1bfa2a.mp3"
+      },
+      "npc-bunny:cookie-train": {
+        "reply": "I remember one clue. Sniff-sniff! Mama didn't stop at Cookie Train Counter. I'm sure of that.",
+        "suggestedReplies": [
+          {
+            "text": "Tell me about music boxes.",
+            "intent": "small_talk"
+          },
+          {
+            "text": "Thank you!",
+            "intent": "goodbye"
+          }
+        ],
+        "mood": "helpful",
+        "conversationComplete": false,
+        "audioUrl": "/assets/games/cjfwNIfLt411ZZKDOC0Qo/audio/mama_cookie-train_npc-bunny_9c421fdc063e4edd.mp3"
+      },
+      "npc-bunny:cloud-stairs": {
+        "reply": "I remember one clue. Sniff-sniff! Mama didn't stop at Cloud Stairs. I'm sure of that.",
+        "suggestedReplies": [
+          {
+            "text": "Tell me about music boxes.",
+            "intent": "small_talk"
+          },
+          {
+            "text": "Thank you!",
+            "intent": "goodbye"
+          }
+        ],
+        "mood": "helpful",
+        "conversationComplete": false,
+        "audioUrl": "/assets/games/cjfwNIfLt411ZZKDOC0Qo/audio/mama_cloud-stairs_npc-bunny_3a65326aa9c420a3.mp3"
+      },
+      "npc-bear:toy-balloons": {
+        "reply": "I heard one helpful thing. Grr-hmm\u2026 Mama didn't stop at Balloon Loft. I'm sure of that.",
+        "suggestedReplies": [
+          {
+            "text": "Tell me about cookie tins and toy trains.",
+            "intent": "small_talk"
+          },
+          {
+            "text": "Thank you!",
+            "intent": "goodbye"
+          }
+        ],
+        "mood": "helpful",
+        "conversationComplete": false,
+        "audioUrl": "/assets/games/cjfwNIfLt411ZZKDOC0Qo/audio/mama_toy-balloons_npc-bear_ade3456249f478ba.mp3"
+      },
+      "npc-bear:music-hum": {
+        "reply": "I heard one helpful thing. Grr-hmm\u2026 Mama didn't stop at Music Nook. I'm sure of that.",
+        "suggestedReplies": [
+          {
+            "text": "Tell me about cookie tins and toy trains.",
+            "intent": "small_talk"
+          },
+          {
+            "text": "Thank you!",
+            "intent": "goodbye"
+          }
+        ],
+        "mood": "helpful",
+        "conversationComplete": false,
+        "audioUrl": "/assets/games/cjfwNIfLt411ZZKDOC0Qo/audio/mama_music-hum_npc-bear_0aa30d46573c16f2.mp3"
+      },
+      "npc-bear:cookie-train": {
+        "reply": "I heard one helpful thing. Grr-hmm\u2026 Mama didn't stop at Cookie Train Counter. I'm sure of that.",
+        "suggestedReplies": [
+          {
+            "text": "Tell me about cookie tins and toy trains.",
+            "intent": "small_talk"
+          },
+          {
+            "text": "Thank you!",
+            "intent": "goodbye"
+          }
+        ],
+        "mood": "helpful",
+        "conversationComplete": false,
+        "audioUrl": "/assets/games/cjfwNIfLt411ZZKDOC0Qo/audio/mama_cookie-train_npc-bear_b03249a149ef54c6.mp3"
+      },
+      "npc-bear:cloud-stairs": {
+        "reply": "I heard one helpful thing. Grr-hmm\u2026 Mama didn't stop at Cloud Stairs. I'm sure of that.",
+        "suggestedReplies": [
+          {
+            "text": "Tell me about cookie tins and toy trains.",
+            "intent": "small_talk"
+          },
+          {
+            "text": "Thank you!",
+            "intent": "goodbye"
+          }
+        ],
+        "mood": "helpful",
+        "conversationComplete": false,
+        "audioUrl": "/assets/games/cjfwNIfLt411ZZKDOC0Qo/audio/mama_cloud-stairs_npc-bear_b5a5791946d919d9.mp3"
+      }
+    },
+    "reunionPhotoUrl": "/assets/games/cjfwNIfLt411ZZKDOC0Qo/reunion.png"
+  },
+  "annotation": {
+    "grid": [
+      "0000000000000000",
+      "0000000000000000",
+      "0000000100000000",
+      "0000000100000000",
+      "0001000100100000",
+      "0001000100100000",
+      "0001000100100000",
+      "0011111111110000",
+      "0010000100010000",
+      "1111111111111111",
+      "1111111111111111",
+      "1111111111111111",
+      "1111111111111111",
+      "1111111111111111",
+      "1111111111111111",
+      "1111111111111111"
+    ],
+    "doors": [
+      {
+        "buildingId": "toy-balloons",
+        "x": 228.0,
+        "y": 288.0,
+        "cell": {
+          "col": 3,
+          "row": 4
+        }
+      },
+      {
+        "buildingId": "music-hum",
+        "x": 681.0,
+        "y": 286.0,
+        "cell": {
+          "col": 10,
+          "row": 4
+        }
+      },
+      {
+        "buildingId": "cookie-train",
+        "x": 748.0,
+        "y": 565.0,
+        "cell": {
+          "col": 11,
+          "row": 8
+        }
+      },
+      {
+        "buildingId": "cloud-stairs",
+        "x": 492.0,
+        "y": 174.0,
+        "cell": {
+          "col": 7,
+          "row": 2
+        }
+      },
+      {
+        "buildingId": "rainbow-bridge",
+        "x": 486.0,
+        "y": 861.0,
+        "cell": {
+          "col": 7,
+          "row": 13
+        }
+      },
+      {
+        "buildingId": "toy-window",
+        "x": 133.0,
+        "y": 707.0,
+        "cell": {
+          "col": 2,
+          "row": 11
+        }
+      }
+    ],
+    "spawn": {
+      "col": 8,
+      "row": 7
+    }
+  },
+  "fromWarmPool": false,
+  "cozyVisuals": false,
+  "librarySourceId": null
+}

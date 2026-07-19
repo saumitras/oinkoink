@@ -1,0 +1,396 @@
+{
+  "id": "B9888D_mmeb8VQ1H84jVq",
+  "idea": "a dinosaur birthday party",
+  "createdAt": "2026-07-16T07:56:09.207683+00:00",
+  "status": "playable",
+  "stages": {
+    "bible": "done",
+    "street": "done",
+    "outline": "done",
+    "hotspots": "done",
+    "character": "done",
+    "tts": "done",
+    "room_b1": "done",
+    "room_b2": "done",
+    "room_b3": "done"
+  },
+  "bible": {
+    "title": "Oink Oink Lost: Dino Birthday Party",
+    "setting": {
+      "name": "Dino Birthday Party Meadow",
+      "description": "A sunny meadow dressed up for a dinosaur birthday party. There are paper flags, big balloons, party hats, and snack tables with yummy treats.",
+      "decorations": [
+        "paper dinosaur banners",
+        "balloons shaped like eggs",
+        "party hats",
+        "cupcake tables",
+        "tiny toy dinos",
+        "streamers"
+      ]
+    },
+    "player": {
+      "description": "A tiny baby pig with a round pink snout and bright curious eyes.",
+      "accessory": "A little blue party hat that keeps slipping over one ear"
+    },
+    "narratorIntro": "Piglet toddles into a dinosaur birthday party and sniffs the sweet air. Mama Pig is somewhere here, and three friendly neighbors each have a little clue.",
+    "buildings": [
+      {
+        "id": "b1",
+        "name": "Cupcake Tent",
+        "exteriorDescription": "A striped party tent with frosting swirls painted on the sign.",
+        "sizeHint": "medium",
+        "isEnterable": true,
+        "interiorDescription": "Inside are shiny trays of cupcakes, sprinkles, and a giggly cake table.",
+        "npcId": "n1"
+      },
+      {
+        "id": "b2",
+        "name": "Bounce Barn",
+        "exteriorDescription": "A round wooden barn with bouncy party music and painted dinosaur footprints.",
+        "sizeHint": "large",
+        "isEnterable": true,
+        "interiorDescription": "Inside is a soft play space with hop balls, ribbon streamers, and happy little boings.",
+        "npcId": "n2"
+      },
+      {
+        "id": "b3",
+        "name": "Gift Gazebo",
+        "exteriorDescription": "A flower-trimmed gazebo with wrapped presents stacked in neat piles.",
+        "sizeHint": "small",
+        "isEnterable": true,
+        "interiorDescription": "Inside are ribbons, boxes, and a table for birthday cards.",
+        "npcId": "n3"
+      },
+      {
+        "id": "b4",
+        "name": "Snack Stand",
+        "exteriorDescription": "A cheerful snack cart with juice cups and dino-shaped cookies.",
+        "sizeHint": "small",
+        "isEnterable": false,
+        "interiorDescription": null,
+        "npcId": null
+      },
+      {
+        "id": "b5",
+        "name": "Balloon Patch",
+        "exteriorDescription": "A patch of grass tied with colorful balloon strings.",
+        "sizeHint": "medium",
+        "isEnterable": false,
+        "interiorDescription": null,
+        "npcId": null
+      }
+    ],
+    "npcs": [
+      {
+        "id": "n1",
+        "name": "Mimi Moosetail",
+        "species": "cow",
+        "appearance": "A spotted cow with a ribbon on her ear and a cupcake crumb on her nose.",
+        "personality": "Cheery, careful, and proud of her baking.",
+        "roomPosition": "left",
+        "ttsVoice": "alloy",
+        "lines": {
+          "greeting": "Hiya, Piglet! Want a sweet clue?",
+          "hint": "Mama went somewhere that smells like frosting and sweet cake.",
+          "idle": "I am guarding the sprinkles. Very important work!"
+        },
+        "conversation": {
+          "speechStyle": "gentle and bouncy",
+          "favoriteTopic": "cupcakes and party treats",
+          "smallTalkFacts": [
+            "The cupcake tent has swirly frosting signs.",
+            "The party tables are covered in bright cloths.",
+            "The cupcakes are topped with tiny sugar stars."
+          ],
+          "openingChoices": [
+            "Ask about cupcakes",
+            "Ask about the party tent",
+            "Ask for a clue"
+          ],
+          "clueLeadIn": "I noticed where Mama went because I was carrying treats."
+        }
+      },
+      {
+        "id": "n2",
+        "name": "Tilly Trunks",
+        "species": "elephant",
+        "appearance": "A small gray elephant with a confetti collar and big floppy ears.",
+        "personality": "Friendly, playful, and a little bit squishy-footed.",
+        "roomPosition": "center",
+        "ttsVoice": "echo",
+        "lines": {
+          "greeting": "Hello, little piggy! I saw something wiggly.",
+          "hint": "Mama went somewhere beside the center path.",
+          "idle": "My ears love party songs. They wiggle right along!"
+        },
+        "conversation": {
+          "speechStyle": "warm and slow",
+          "favoriteTopic": "games and music",
+          "smallTalkFacts": [
+            "The bounce barn has soft mats on the floor.",
+            "Party music makes the ribbons flutter.",
+            "Kids like to hop in tiny bouncy steps."
+          ],
+          "openingChoices": [
+            "Ask about music",
+            "Ask about the bounce barn",
+            "Ask for a clue"
+          ],
+          "clueLeadIn": "I saw Mama because I was bouncing near the music."
+        }
+      },
+      {
+        "id": "n3",
+        "name": "Nibbles Nuzzle",
+        "species": "rabbit",
+        "appearance": "A fluffy tan rabbit with a bow tie and a basket of gift tags.",
+        "personality": "Polite, quick, and excited about surprises.",
+        "roomPosition": "right",
+        "ttsVoice": "fable",
+        "lines": {
+          "greeting": "Hello there! I have a neat little clue.",
+          "hint": "Mama went somewhere with a shiny cake table.",
+          "idle": "I love sorting tags. Each present gets a name!"
+        },
+        "conversation": {
+          "speechStyle": "snappy and polite",
+          "favoriteTopic": "presents and ribbons",
+          "smallTalkFacts": [
+            "The gift gazebo is trimmed with flowers.",
+            "Wrapped boxes are stacked by the table.",
+            "Birthday cards have shiny crayon drawings."
+          ],
+          "openingChoices": [
+            "Ask about gifts",
+            "Ask about the gazebo",
+            "Ask for a clue"
+          ],
+          "clueLeadIn": "I peeked up when a ribbon fluttered past."
+        }
+      }
+    ],
+    "hints": [
+      {
+        "id": "h1",
+        "npcId": "n1",
+        "kind": "attribute",
+        "text": "Mama went somewhere that smells like frosting and sweet cake.",
+        "eliminatesLocationIds": [
+          "b2",
+          "b3"
+        ]
+      },
+      {
+        "id": "h2",
+        "npcId": "n2",
+        "kind": "direction",
+        "text": "Mama went somewhere beside the center path.",
+        "eliminatesLocationIds": [
+          "b3",
+          "b4"
+        ]
+      },
+      {
+        "id": "h3",
+        "npcId": "n3",
+        "kind": "object",
+        "text": "Mama went somewhere with a shiny cake table.",
+        "eliminatesLocationIds": [
+          "b3"
+        ]
+      }
+    ],
+    "candidateLocations": [
+      {
+        "id": "b1",
+        "name": "Cupcake Tent",
+        "emoji": "\ud83e\uddc1",
+        "description": "A striped tent with sweet smells and frosting all around.",
+        "clueFacts": {
+          "attribute": "that smells like frosting and sweet cake",
+          "direction": "beside the center path",
+          "object": "with a shiny cake table"
+        }
+      },
+      {
+        "id": "b2",
+        "name": "Bounce Barn",
+        "emoji": "\ud83e\udd95",
+        "description": "A round barn full of boings, music, and happy hops.",
+        "clueFacts": {
+          "attribute": "that smells like warm hay",
+          "direction": "beside the center path",
+          "object": "with a shiny cake table"
+        }
+      },
+      {
+        "id": "b3",
+        "name": "Gift Gazebo",
+        "emoji": "\ud83c\udf81",
+        "description": "A flower-trimmed gazebo with ribbons and wrapped presents.",
+        "clueFacts": {
+          "attribute": "that smells like warm hay",
+          "direction": "beside the north path",
+          "object": "with a table of birthday cards"
+        }
+      },
+      {
+        "id": "b4",
+        "name": "Snack Stand",
+        "emoji": "\ud83c\udf6a",
+        "description": "A cheerful snack cart with cookies and juice.",
+        "clueFacts": {
+          "attribute": "that smells like frosting and sweet cake",
+          "direction": "beside the east path",
+          "object": "with a shiny cake table"
+        }
+      }
+    ],
+    "finalLocationId": "b1",
+    "finalLocationBuildingId": "b1",
+    "reunionLine": "Mama Pig nuzzles Piglet close. \"There you are, my little party snout!\"",
+    "verification": "attribute: Cupcake Tent, Snack Stand; direction: Cupcake Tent, Bounce Barn; object: Cupcake Tent, Bounce Barn, Snack Stand. Only Cupcake Tent matches all three."
+  },
+  "assets": {
+    "streetUrl": "/assets/games/B9888D_mmeb8VQ1H84jVq/street.png",
+    "outlineUrl": "/assets/games/B9888D_mmeb8VQ1H84jVq/outline.png",
+    "characterFrontUrl": "/assets/games/B9888D_mmeb8VQ1H84jVq/char_front.png",
+    "characterSideUrl": "/assets/games/B9888D_mmeb8VQ1H84jVq/char_side.png",
+    "rooms": {
+      "b1": {
+        "imageUrl": "/assets/games/B9888D_mmeb8VQ1H84jVq/room_b1.png",
+        "annotation": {
+          "npcBox": {
+            "x": 85.0,
+            "y": 354.0,
+            "w": 269.0,
+            "h": 378.0
+          },
+          "exit": {
+            "x": 529.0,
+            "y": 929.0
+          }
+        }
+      },
+      "b2": {
+        "imageUrl": "/assets/games/B9888D_mmeb8VQ1H84jVq/room_b2.png",
+        "annotation": {
+          "npcBox": {
+            "x": 290.0,
+            "y": 357.0,
+            "w": 443.0,
+            "h": 401.0
+          },
+          "exit": {
+            "x": 514.0,
+            "y": 962.0
+          }
+        }
+      },
+      "b3": {
+        "imageUrl": "/assets/games/B9888D_mmeb8VQ1H84jVq/room_b3.png",
+        "annotation": {
+          "npcBox": {
+            "x": 616.0,
+            "y": 179.0,
+            "w": 268.0,
+            "h": 585.0
+          },
+          "exit": {
+            "x": 535.0,
+            "y": 930.0
+          }
+        }
+      }
+    },
+    "audio": {
+      "npc_n2.hint": "/assets/games/B9888D_mmeb8VQ1H84jVq/audio/npc_n2.hint.mp3",
+      "npc_n3.greeting": "/assets/games/B9888D_mmeb8VQ1H84jVq/audio/npc_n3.greeting.mp3",
+      "npc_n2.greeting": "/assets/games/B9888D_mmeb8VQ1H84jVq/audio/npc_n2.greeting.mp3",
+      "npc_n1.hint": "/assets/games/B9888D_mmeb8VQ1H84jVq/audio/npc_n1.hint.mp3",
+      "npc_n3.hint": "/assets/games/B9888D_mmeb8VQ1H84jVq/audio/npc_n3.hint.mp3",
+      "narrator.allHints": "/assets/games/B9888D_mmeb8VQ1H84jVq/audio/narrator.allHints.mp3",
+      "npc_n3.idle": "/assets/games/B9888D_mmeb8VQ1H84jVq/audio/npc_n3.idle.mp3",
+      "npc_n1.idle": "/assets/games/B9888D_mmeb8VQ1H84jVq/audio/npc_n1.idle.mp3",
+      "narrator.reunion": "/assets/games/B9888D_mmeb8VQ1H84jVq/audio/narrator.reunion.mp3",
+      "npc_n2.idle": "/assets/games/B9888D_mmeb8VQ1H84jVq/audio/npc_n2.idle.mp3",
+      "narrator.intro": "/assets/games/B9888D_mmeb8VQ1H84jVq/audio/narrator.intro.mp3",
+      "npc_n1.greeting": "/assets/games/B9888D_mmeb8VQ1H84jVq/audio/npc_n1.greeting.mp3",
+      "building_b4.look": "/assets/games/B9888D_mmeb8VQ1H84jVq/audio/building_b4.look.wav",
+      "building_b5.look": "/assets/games/B9888D_mmeb8VQ1H84jVq/audio/building_b5.look.wav"
+    },
+    "reunionPhotoUrl": "/assets/games/B9888D_mmeb8VQ1H84jVq/reunion.png"
+  },
+  "annotation": {
+    "grid": [
+      "1111111111111111",
+      "1111111100011111",
+      "1100011000001111",
+      "1000001000001111",
+      "1000001111111111",
+      "1101001111110111",
+      "1011100111100011",
+      "1111111111100001",
+      "1101111011100001",
+      "1101010011100011",
+      "1000011011001100",
+      "1011111111011111",
+      "1110111111100011",
+      "1101001111000011",
+      "1101011111100011",
+      "1111111111111111"
+    ],
+    "doors": [
+      {
+        "buildingId": "b1",
+        "x": 250.0,
+        "y": 381.0,
+        "cell": {
+          "col": 3,
+          "row": 5
+        }
+      },
+      {
+        "buildingId": "b2",
+        "x": 575.0,
+        "y": 263.0,
+        "cell": {
+          "col": 8,
+          "row": 4
+        }
+      },
+      {
+        "buildingId": "b3",
+        "x": 806.0,
+        "y": 652.0,
+        "cell": {
+          "col": 12,
+          "row": 10
+        }
+      },
+      {
+        "buildingId": "b4",
+        "x": 225.0,
+        "y": 548.0,
+        "cell": {
+          "col": 3,
+          "row": 8
+        }
+      },
+      {
+        "buildingId": "b5",
+        "x": 240.0,
+        "y": 863.0,
+        "cell": {
+          "col": 3,
+          "row": 13
+        }
+      }
+    ],
+    "spawn": {
+      "col": 7,
+      "row": 7
+    }
+  },
+  "fromWarmPool": false
+}

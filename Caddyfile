@@ -1,0 +1,8 @@
+www.oinkoink.fun {
+	redir https://oinkoink.fun{uri} permanent
+}
+
+oinkoink.fun {
+	encode zstd gzip
+	reverse_proxy client:80
+}

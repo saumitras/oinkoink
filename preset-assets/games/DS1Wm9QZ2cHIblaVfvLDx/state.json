@@ -1,0 +1,348 @@
+{
+  "id": "DS1Wm9QZ2cHIblaVfvLDx",
+  "idea": "a tiny seaside village",
+  "createdAt": "2026-07-15T20:53:01.296856+00:00",
+  "status": "playable",
+  "stages": {
+    "bible": "done",
+    "street": "done",
+    "outline": "done",
+    "hotspots": "done",
+    "character": "done",
+    "tts": "done",
+    "room_b1": "done",
+    "room_b2": "done",
+    "room_b3": "done"
+  },
+  "bible": {
+    "title": "Oink Oink Lost: Seaside Snuffles",
+    "setting": {
+      "name": "Tiny Seaside Village",
+      "description": "A cozy little village by the sea, with salty air, sandy paths, and cheerful cottages.",
+      "decorations": [
+        "seashell bunting",
+        "little rope fences",
+        "flower boxes",
+        "tiny fishing nets",
+        "waving laundry"
+      ]
+    },
+    "player": {
+      "description": "A small baby pig with a round snout and a very curious walk.",
+      "accessory": "a red neck ribbon"
+    },
+    "narratorIntro": "Piglet is gently lost in a tiny seaside village. Three friendly neighbors have little clues to help Piglet find Mama Pig.",
+    "buildings": [
+      {
+        "id": "b1",
+        "name": "Seashell Cottage",
+        "exteriorDescription": "A small blue cottage with shell buttons by the door.",
+        "sizeHint": "small",
+        "isEnterable": true,
+        "interiorDescription": "Inside are tidy chairs, a teapot, and a basket of knitted scarves.",
+        "npcId": "n1"
+      },
+      {
+        "id": "b2",
+        "name": "Harbor Bakery",
+        "exteriorDescription": "A warm bakery with a chalkboard sign and flower pots out front.",
+        "sizeHint": "medium",
+        "isEnterable": true,
+        "interiorDescription": "Inside there are shiny trays, sweet smells, and a cheerful pie counter.",
+        "npcId": "n2"
+      },
+      {
+        "id": "b3",
+        "name": "Net Mender Shed",
+        "exteriorDescription": "A neat wooden shed with nets hanging on pegs and a tiny bench.",
+        "sizeHint": "small",
+        "isEnterable": true,
+        "interiorDescription": "Inside are coiled ropes, mended nets, and little jars of string.",
+        "npcId": "n3"
+      },
+      {
+        "id": "b4",
+        "name": "Pearl Post",
+        "exteriorDescription": "A small post office with a pearl-painted door and a bell by the step.",
+        "sizeHint": "small",
+        "isEnterable": false,
+        "interiorDescription": null,
+        "npcId": null
+      },
+      {
+        "id": "b5",
+        "name": "Seabreeze Market",
+        "exteriorDescription": "A lively market stall with striped cloth and baskets of fruit.",
+        "sizeHint": "large",
+        "isEnterable": false,
+        "interiorDescription": null,
+        "npcId": null
+      }
+    ],
+    "npcs": [
+      {
+        "id": "n1",
+        "name": "Mina",
+        "species": "seagull",
+        "appearance": "A fluffy seagull with a yellow scarf and a tidy beak.",
+        "personality": "Kind, brisk, and proud of her neat little cottage.",
+        "roomPosition": "left",
+        "ttsVoice": "alloy",
+        "lines": {
+          "greeting": "Hello, little pig! I saw Mama waddling about.",
+          "hint": "I am sure Mama did not stop at Seashell Cottage.",
+          "idle": "I like shiny shells and tidy things."
+        }
+      },
+      {
+        "id": "n2",
+        "name": "Bram",
+        "species": "otter",
+        "appearance": "A smiling otter with a floury nose and rolled-up sleeves.",
+        "personality": "Bouncy, helpful, and always thinking about snacks.",
+        "roomPosition": "center",
+        "ttsVoice": "echo",
+        "lines": {
+          "greeting": "Oh, hello! I can help with a clue.",
+          "hint": "I am sure Mama did not stop at Net Mender Shed.",
+          "idle": "My aprons always smell sweet."
+        }
+      },
+      {
+        "id": "n3",
+        "name": "Lulu",
+        "species": "cat",
+        "appearance": "A gray cat with a red apron and a string tied around one paw.",
+        "personality": "Quiet, clever, and very good at noticing where things go.",
+        "roomPosition": "right",
+        "ttsVoice": "fable",
+        "lines": {
+          "greeting": "Purrfect timing. I remember something helpful.",
+          "hint": "I am sure Mama did not stop at Pearl Post.",
+          "idle": "I keep my strings very tidy."
+        }
+      }
+    ],
+    "hints": [
+      {
+        "id": "h1",
+        "npcId": "n1",
+        "kind": "attribute",
+        "text": "I am sure Mama did not stop at Seashell Cottage.",
+        "eliminatesLocationIds": [
+          "b1"
+        ]
+      },
+      {
+        "id": "h2",
+        "npcId": "n2",
+        "kind": "direction",
+        "text": "I am sure Mama did not stop at Net Mender Shed.",
+        "eliminatesLocationIds": [
+          "b3"
+        ]
+      },
+      {
+        "id": "h3",
+        "npcId": "n3",
+        "kind": "object",
+        "text": "I am sure Mama did not stop at Pearl Post.",
+        "eliminatesLocationIds": [
+          "b4"
+        ]
+      }
+    ],
+    "candidateLocations": [
+      {
+        "id": "b1",
+        "name": "Seashell Cottage",
+        "emoji": "\ud83d\udc1a",
+        "description": "A cozy cottage with shell buttons and a tidy porch.",
+        "clueFacts": {
+          "attribute": "that smells like salty tea",
+          "direction": "beside the west lane",
+          "object": "with a basket of knitted scarves"
+        }
+      },
+      {
+        "id": "b2",
+        "name": "Harbor Bakery",
+        "emoji": "\ud83e\udd67",
+        "description": "A warm bakery with sweet treats and a happy pie counter.",
+        "clueFacts": {
+          "attribute": "that smells like warm bread",
+          "direction": "by the north side",
+          "object": "with a shiny pie counter"
+        }
+      },
+      {
+        "id": "b3",
+        "name": "Net Mender Shed",
+        "emoji": "\ud83e\udea2",
+        "description": "A neat shed for fixing fishing nets and hanging rope.",
+        "clueFacts": {
+          "attribute": "that smells like salty tea",
+          "direction": "beside the east pier",
+          "object": "with shiny net hooks"
+        }
+      },
+      {
+        "id": "b4",
+        "name": "Pearl Post",
+        "emoji": "\ud83d\udcee",
+        "description": "A little post office with a bell and a pearl-painted door.",
+        "clueFacts": {
+          "attribute": "that smells like ink and paper",
+          "direction": "near the south path",
+          "object": "with a bell by the step"
+        }
+      }
+    ],
+    "finalLocationId": "b2",
+    "finalLocationBuildingId": "b2",
+    "reunionLine": "Mama Pig is at the Harbor Bakery! Piglet nuzzles Mama and gets a happy snuggle.",
+    "verification": "Each clue rules out one wrong place; only Harbor Bakery remains."
+  },
+  "assets": {
+    "streetUrl": "/assets/games/DS1Wm9QZ2cHIblaVfvLDx/street.png",
+    "outlineUrl": "/assets/games/DS1Wm9QZ2cHIblaVfvLDx/outline.png",
+    "characterFrontUrl": "/assets/games/DS1Wm9QZ2cHIblaVfvLDx/char_front.png",
+    "characterSideUrl": "/assets/games/DS1Wm9QZ2cHIblaVfvLDx/char_side.png",
+    "rooms": {
+      "b1": {
+        "imageUrl": "/assets/games/DS1Wm9QZ2cHIblaVfvLDx/room_b1.png",
+        "annotation": {
+          "npcBox": {
+            "x": 89.0,
+            "y": 434.0,
+            "w": 225.0,
+            "h": 325.0
+          },
+          "exit": {
+            "x": 511.0,
+            "y": 943.0
+          }
+        }
+      },
+      "b2": {
+        "imageUrl": "/assets/games/DS1Wm9QZ2cHIblaVfvLDx/room_b2.png",
+        "annotation": {
+          "npcBox": {
+            "x": 448.0,
+            "y": 163.0,
+            "w": 217.0,
+            "h": 362.0
+          },
+          "exit": {
+            "x": 519.0,
+            "y": 933.0
+          }
+        }
+      },
+      "b3": {
+        "imageUrl": "/assets/games/DS1Wm9QZ2cHIblaVfvLDx/room_b3.png",
+        "annotation": {
+          "npcBox": {
+            "x": 609.0,
+            "y": 268.0,
+            "w": 355.0,
+            "h": 479.0
+          },
+          "exit": {
+            "x": 507.0,
+            "y": 989.0
+          }
+        }
+      }
+    },
+    "audio": {
+      "npc_n2.idle": "/assets/games/DS1Wm9QZ2cHIblaVfvLDx/audio/npc_n2.idle.mp3",
+      "npc_n1.hint": "/assets/games/DS1Wm9QZ2cHIblaVfvLDx/audio/npc_n1.hint.mp3",
+      "npc_n3.hint": "/assets/games/DS1Wm9QZ2cHIblaVfvLDx/audio/npc_n3.hint.mp3",
+      "npc_n1.idle": "/assets/games/DS1Wm9QZ2cHIblaVfvLDx/audio/npc_n1.idle.mp3",
+      "narrator.allHints": "/assets/games/DS1Wm9QZ2cHIblaVfvLDx/audio/narrator.allHints.mp3",
+      "npc_n3.idle": "/assets/games/DS1Wm9QZ2cHIblaVfvLDx/audio/npc_n3.idle.mp3",
+      "narrator.reunion": "/assets/games/DS1Wm9QZ2cHIblaVfvLDx/audio/narrator.reunion.mp3",
+      "npc_n2.hint": "/assets/games/DS1Wm9QZ2cHIblaVfvLDx/audio/npc_n2.hint.mp3",
+      "npc_n2.greeting": "/assets/games/DS1Wm9QZ2cHIblaVfvLDx/audio/npc_n2.greeting.mp3",
+      "narrator.intro": "/assets/games/DS1Wm9QZ2cHIblaVfvLDx/audio/narrator.intro.mp3",
+      "npc_n1.greeting": "/assets/games/DS1Wm9QZ2cHIblaVfvLDx/audio/npc_n1.greeting.mp3",
+      "npc_n3.greeting": "/assets/games/DS1Wm9QZ2cHIblaVfvLDx/audio/npc_n3.greeting.mp3",
+      "building_b4.look": "/assets/games/DS1Wm9QZ2cHIblaVfvLDx/audio/building_b4.look.wav",
+      "building_b5.look": "/assets/games/DS1Wm9QZ2cHIblaVfvLDx/audio/building_b5.look.wav"
+    },
+    "reunionPhotoUrl": "/assets/games/DS1Wm9QZ2cHIblaVfvLDx/reunion.png"
+  },
+  "annotation": {
+    "grid": [
+      "1111111111111111",
+      "1111111000111111",
+      "1111111010011111",
+      "1111111010011111",
+      "1111111111001001",
+      "1111111111001001",
+      "1111111111001001",
+      "1111111111111111",
+      "1100111111111111",
+      "1100011111100111",
+      "1100001111111111",
+      "1100011111111111",
+      "1111111111111111",
+      "1111111111111111",
+      "1111111111111111",
+      "1111111111111111"
+    ],
+    "doors": [
+      {
+        "buildingId": "b1",
+        "x": 233.0,
+        "y": 356.0,
+        "cell": {
+          "col": 3,
+          "row": 5
+        }
+      },
+      {
+        "buildingId": "b2",
+        "x": 526.0,
+        "y": 188.0,
+        "cell": {
+          "col": 8,
+          "row": 2
+        }
+      },
+      {
+        "buildingId": "b3",
+        "x": 805.0,
+        "y": 268.0,
+        "cell": {
+          "col": 12,
+          "row": 4
+        }
+      },
+      {
+        "buildingId": "b4",
+        "x": 756.0,
+        "y": 760.0,
+        "cell": {
+          "col": 11,
+          "row": 11
+        }
+      },
+      {
+        "buildingId": "b5",
+        "x": 790.0,
+        "y": 398.0,
+        "cell": {
+          "col": 12,
+          "row": 6
+        }
+      }
+    ],
+    "spawn": {
+      "col": 7,
+      "row": 8
+    }
+  },
+  "fromWarmPool": false
+}

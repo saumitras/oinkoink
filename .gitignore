@@ -1,0 +1,33 @@
+# Dependencies and build output
+node_modules/
+dist/
+coverage/
+
+# Runtime-generated game assets and AI caches
+local-assets/
+dev-cache/
+
+# Local configuration and secrets
+.env
+.env.*
+!.env.example
+*.local
+
+# Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Local assistant/editor state
+.claude/
+.vscode/
+.idea/
+
+# OS and logs
+.DS_Store
+*.log
+npm-debug.log*

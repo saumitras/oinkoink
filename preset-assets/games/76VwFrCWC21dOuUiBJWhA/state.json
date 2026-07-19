@@ -1,0 +1,474 @@
+{
+  "id": "76VwFrCWC21dOuUiBJWhA",
+  "idea": "a pumpkin farm in autumn",
+  "createdAt": "2026-07-15T20:43:37.587432+00:00",
+  "status": "playable",
+  "stages": {
+    "bible": "done",
+    "street": "done",
+    "outline": "done",
+    "hotspots": "done",
+    "character": "done",
+    "tts": "done",
+    "room_barn": "done",
+    "room_market": "done",
+    "room_orchard": "done"
+  },
+  "bible": {
+    "title": "Oink Oink Lost: Pumpkin Patch Puzzles",
+    "setting": {
+      "name": "Autumn Pumpkin Farm",
+      "description": "A cozy pumpkin farm in fall, with orange leaves, soft hay, and friendly animal neighbors.",
+      "decorations": [
+        "pumpkin stacks",
+        "hay bales",
+        "apple crates",
+        "leaf piles",
+        "tiny scarecrow smiles"
+      ]
+    },
+    "player": {
+      "description": "A small baby pig with a round snout and wiggly ears.",
+      "accessory": "a bright red scarf"
+    },
+    "narratorIntro": "Piglet got a little separated on the pumpkin farm. Three friendly neighbors can each share one clue to help Piglet find Mama Pig.",
+    "buildings": [
+      {
+        "id": "barn",
+        "name": "Red Barn",
+        "exteriorDescription": "A red barn with a big round door and a pumpkin sign.",
+        "sizeHint": "large",
+        "isEnterable": true,
+        "interiorDescription": "Inside are warm tools, hay bundles, and a tidy feed shelf.",
+        "npcId": "cow"
+      },
+      {
+        "id": "market",
+        "name": "Pumpkin Market Stall",
+        "exteriorDescription": "A cheerful stall with baskets of pumpkins and apple pies.",
+        "sizeHint": "medium",
+        "isEnterable": true,
+        "interiorDescription": "Inside are shiny crates, pies, and a small wooden counter.",
+        "npcId": "goat"
+      },
+      {
+        "id": "orchard",
+        "name": "Apple Orchard Shed",
+        "exteriorDescription": "A little shed beside apple trees and a barrel of cider.",
+        "sizeHint": "small",
+        "isEnterable": true,
+        "interiorDescription": "Inside are apple crates, cider cups, and a hand cart.",
+        "npcId": "duck"
+      },
+      {
+        "id": "cornCrib",
+        "name": "Corn Crib",
+        "exteriorDescription": "A tidy crib with tall corn bundles stacked nearby.",
+        "sizeHint": "medium",
+        "isEnterable": false,
+        "interiorDescription": null,
+        "npcId": null
+      },
+      {
+        "id": "pumpkinPatch",
+        "name": "Pumpkin Patch Row",
+        "exteriorDescription": "A wide patch full of round pumpkins and curly vines.",
+        "sizeHint": "large",
+        "isEnterable": false,
+        "interiorDescription": null,
+        "npcId": null
+      },
+      {
+        "id": "hayLoft",
+        "name": "Hay Loft",
+        "exteriorDescription": "A fluffy loft of golden hay up above the barn.",
+        "sizeHint": "small",
+        "isEnterable": false,
+        "interiorDescription": null,
+        "npcId": null
+      }
+    ],
+    "npcs": [
+      {
+        "id": "cow",
+        "name": "Mabel",
+        "species": "cow",
+        "appearance": "A kind cow with a cream spot on her nose and a blue ribbon.",
+        "personality": "Gentle and chatty.",
+        "roomPosition": "left",
+        "ttsVoice": "cedar",
+        "lines": {
+          "greeting": "Moo\u2026 hello, little one. You look like you're searching for someone.",
+          "hint": "Moo\u2026 Mama didn't stop at Pumpkin Market Stall. I'm sure of that.",
+          "idle": "Hmm\u2026 I do my best thinking over a nice bundle of hay."
+        },
+        "conversation": {
+          "speechStyle": "relaxed, thoughtful, gently funny, and conversational",
+          "favoriteTopic": "the sweet-smelling hay in the barn",
+          "smallTalkFacts": [
+            "The softest hay is stacked beside the blue fork.",
+            "Mabel likes the quiet creak of the barn in the afternoon."
+          ],
+          "openingChoices": [
+            "Have you seen my Mama?",
+            "Tell me about the hay.",
+            "What do you like about the barn?"
+          ],
+          "clueLeadIn": "Hmm\u2026 this may help.",
+          "animalSound": "Moo"
+        }
+      },
+      {
+        "id": "goat",
+        "name": "Tilly",
+        "species": "goat",
+        "appearance": "A small goat with curled horns and a yellow apron.",
+        "personality": "Playful and helpful.",
+        "roomPosition": "center",
+        "ttsVoice": "marin",
+        "lines": {
+          "greeting": "Baa\u2014hello, Piglet! You've arrived just as I was sorting the best pumpkins.",
+          "hint": "Baa\u2014Mama didn't stop at Apple Orchard Shed. I'm sure of that.",
+          "idle": "I always sort the roundest pumpkins first\u2026 unless I get hungry."
+        },
+        "conversation": {
+          "speechStyle": "lively, curious, lightly mischievous, and natural",
+          "favoriteTopic": "the market's pumpkins and pies",
+          "smallTalkFacts": [
+            "Tilly sorts pumpkins by how nicely they roll.",
+            "There is one very special pie on the highest shelf."
+          ],
+          "openingChoices": [
+            "Have you seen my Mama?",
+            "Tell me about the pumpkins.",
+            "Which pie smells best?"
+          ],
+          "clueLeadIn": "Oh! I did spot something useful.",
+          "animalSound": "Baa"
+        }
+      },
+      {
+        "id": "duck",
+        "name": "Dottie",
+        "species": "duck",
+        "appearance": "A plump duck with an orange bow and bright boots.",
+        "personality": "Cheery and observant.",
+        "roomPosition": "right",
+        "ttsVoice": "coral",
+        "lines": {
+          "greeting": "Quack-quack! Hello, Piglet. I notice nearly everything that rolls through this orchard.",
+          "hint": "Quack! Mama didn't stop at Pumpkin Patch Row. I'm sure of that.",
+          "idle": "I like tidy baskets, crunchy leaves\u2026 and apples that stay where I put them."
+        },
+        "conversation": {
+          "speechStyle": "bright, observant, quick-witted, and conversational",
+          "favoriteTopic": "the orchard's runaway apples",
+          "smallTalkFacts": [
+            "Dottie lines up the apples until one inevitably rolls away.",
+            "The crunchiest leaves collect near the orchard doorway."
+          ],
+          "openingChoices": [
+            "Have you seen my Mama?",
+            "Tell me about the apples.",
+            "What did you notice today?"
+          ],
+          "clueLeadIn": "Quack! Here's what I noticed.",
+          "animalSound": "Quack"
+        }
+      }
+    ],
+    "hints": [
+      {
+        "id": "h1",
+        "npcId": "cow",
+        "kind": "attribute",
+        "text": "Moo\u2026 Mama didn't stop at Pumpkin Market Stall. I'm sure of that.",
+        "eliminatesLocationIds": [
+          "market"
+        ]
+      },
+      {
+        "id": "h2",
+        "npcId": "goat",
+        "kind": "direction",
+        "text": "Baa\u2014Mama didn't stop at Apple Orchard Shed. I'm sure of that.",
+        "eliminatesLocationIds": [
+          "orchard"
+        ]
+      },
+      {
+        "id": "h3",
+        "npcId": "duck",
+        "kind": "object",
+        "text": "Quack! Mama didn't stop at Pumpkin Patch Row. I'm sure of that.",
+        "eliminatesLocationIds": [
+          "pumpkinPatch"
+        ]
+      }
+    ],
+    "candidateLocations": [
+      {
+        "id": "barn",
+        "name": "Red Barn",
+        "emoji": "\ud83c\udfe0",
+        "description": "Warm tools, hay bundles, and a cozy feed shelf.",
+        "clueFacts": {
+          "attribute": "that smells like warm hay",
+          "direction": "near the west side of the farm",
+          "object": "with warm barn tools"
+        }
+      },
+      {
+        "id": "market",
+        "name": "Pumpkin Market Stall",
+        "emoji": "\ud83c\udf83",
+        "description": "Pumpkins, pies, and a little wooden counter.",
+        "clueFacts": {
+          "attribute": "that smells like sweet apple pie",
+          "direction": "near the east side of the farm",
+          "object": "with a shiny wooden counter"
+        }
+      },
+      {
+        "id": "orchard",
+        "name": "Apple Orchard Shed",
+        "emoji": "\ud83c\udf4e",
+        "description": "Apple crates, cider cups, and a hand cart.",
+        "clueFacts": {
+          "attribute": "that smells like sweet apple pie",
+          "direction": "near the north side of the farm",
+          "object": "with a cider cup table"
+        }
+      },
+      {
+        "id": "pumpkinPatch",
+        "name": "Pumpkin Patch Row",
+        "emoji": "\ud83c\udf83",
+        "description": "Round pumpkins and curly vines.",
+        "clueFacts": {
+          "attribute": "that smells like warm hay",
+          "direction": "near the south fence",
+          "object": "with a pumpkin stack"
+        }
+      }
+    ],
+    "finalLocationId": "barn",
+    "finalLocationBuildingId": "barn",
+    "reunionLine": "Mama Pig found you, Piglet! Let\u2019s go home for pumpkin pie.",
+    "verification": "Each clue rules out one wrong place; only Red Barn remains."
+  },
+  "assets": {
+    "streetUrl": "/assets/games/76VwFrCWC21dOuUiBJWhA/street.png",
+    "outlineUrl": "/assets/games/76VwFrCWC21dOuUiBJWhA/outline.png",
+    "characterFrontUrl": "/assets/games/76VwFrCWC21dOuUiBJWhA/char_front.png",
+    "characterSideUrl": "/assets/games/76VwFrCWC21dOuUiBJWhA/char_side.png",
+    "rooms": {
+      "barn": {
+        "imageUrl": "/assets/games/76VwFrCWC21dOuUiBJWhA/room_barn.png",
+        "annotation": {
+          "npcBox": {
+            "x": 165.0,
+            "y": 342.0,
+            "w": 358.0,
+            "h": 454.0
+          },
+          "exit": {
+            "x": 511.0,
+            "y": 959.0
+          }
+        }
+      },
+      "market": {
+        "imageUrl": "/assets/games/76VwFrCWC21dOuUiBJWhA/room_market.png",
+        "annotation": {
+          "npcBox": {
+            "x": 516.0,
+            "y": 213.0,
+            "w": 230.0,
+            "h": 485.0
+          },
+          "exit": {
+            "x": 533.0,
+            "y": 922.0
+          }
+        }
+      },
+      "orchard": {
+        "imageUrl": "/assets/games/76VwFrCWC21dOuUiBJWhA/room_orchard.png",
+        "annotation": {
+          "npcBox": {
+            "x": 684.0,
+            "y": 291.0,
+            "w": 207.0,
+            "h": 361.0
+          },
+          "exit": {
+            "x": 521.0,
+            "y": 1007.0
+          }
+        }
+      }
+    },
+    "audio": {
+      "npc_duck.greeting": "/assets/games/76VwFrCWC21dOuUiBJWhA/audio/opener_duck_4a8df24ef362c47d.mp3",
+      "npc_cow.idle": "/assets/games/76VwFrCWC21dOuUiBJWhA/audio/npc_cow.idle.mp3",
+      "npc_duck.idle": "/assets/games/76VwFrCWC21dOuUiBJWhA/audio/npc_duck.idle.mp3",
+      "npc_cow.greeting": "/assets/games/76VwFrCWC21dOuUiBJWhA/audio/opener_cow_645ab680f08dd824.mp3",
+      "npc_goat.idle": "/assets/games/76VwFrCWC21dOuUiBJWhA/audio/npc_goat.idle.mp3",
+      "narrator.intro": "/assets/games/76VwFrCWC21dOuUiBJWhA/audio/narrator.intro.mp3",
+      "npc_duck.hint": "/assets/games/76VwFrCWC21dOuUiBJWhA/audio/npc_duck.hint.mp3",
+      "npc_cow.hint": "/assets/games/76VwFrCWC21dOuUiBJWhA/audio/npc_cow.hint.mp3",
+      "npc_goat.greeting": "/assets/games/76VwFrCWC21dOuUiBJWhA/audio/opener_goat_d1554233310d2660.mp3",
+      "narrator.allHints": "/assets/games/76VwFrCWC21dOuUiBJWhA/audio/narrator.allHints.mp3",
+      "npc_goat.hint": "/assets/games/76VwFrCWC21dOuUiBJWhA/audio/npc_goat.hint.mp3",
+      "narrator.reunion": "/assets/games/76VwFrCWC21dOuUiBJWhA/audio/narrator.reunion.mp3",
+      "building_cornCrib.look": "/assets/games/76VwFrCWC21dOuUiBJWhA/audio/building_cornCrib.look.wav",
+      "building_pumpkinPatch.look": "/assets/games/76VwFrCWC21dOuUiBJWhA/audio/building_pumpkinPatch.look.wav",
+      "building_hayLoft.look": "/assets/games/76VwFrCWC21dOuUiBJWhA/audio/building_hayLoft.look.wav"
+    },
+    "npcOpeners": {
+      "cow": {
+        "reply": "Moo\u2026 hello, little one. You look like you're searching for someone.",
+        "suggestedReplies": [
+          {
+            "text": "Have you seen my Mama?",
+            "intent": "ask_mama"
+          },
+          {
+            "text": "Tell me about the hay.",
+            "intent": "small_talk"
+          },
+          {
+            "text": "What do you like about the barn?",
+            "intent": "small_talk"
+          }
+        ],
+        "mood": "cheerful",
+        "conversationComplete": false,
+        "audioUrl": "/assets/games/76VwFrCWC21dOuUiBJWhA/audio/opener_cow_645ab680f08dd824.mp3"
+      },
+      "goat": {
+        "reply": "Baa\u2014hello, Piglet! You've arrived just as I was sorting the best pumpkins.",
+        "suggestedReplies": [
+          {
+            "text": "Have you seen my Mama?",
+            "intent": "ask_mama"
+          },
+          {
+            "text": "Tell me about the pumpkins.",
+            "intent": "small_talk"
+          },
+          {
+            "text": "Which pie smells best?",
+            "intent": "small_talk"
+          }
+        ],
+        "mood": "cheerful",
+        "conversationComplete": false,
+        "audioUrl": "/assets/games/76VwFrCWC21dOuUiBJWhA/audio/opener_goat_d1554233310d2660.mp3"
+      },
+      "duck": {
+        "reply": "Quack-quack! Hello, Piglet. I notice nearly everything that rolls through this orchard.",
+        "suggestedReplies": [
+          {
+            "text": "Have you seen my Mama?",
+            "intent": "ask_mama"
+          },
+          {
+            "text": "Tell me about the apples.",
+            "intent": "small_talk"
+          },
+          {
+            "text": "What did you notice today?",
+            "intent": "small_talk"
+          }
+        ],
+        "mood": "cheerful",
+        "conversationComplete": false,
+        "audioUrl": "/assets/games/76VwFrCWC21dOuUiBJWhA/audio/opener_duck_4a8df24ef362c47d.mp3"
+      }
+    },
+    "reunionPhotoUrl": "/assets/games/76VwFrCWC21dOuUiBJWhA/reunion.png"
+  },
+  "annotation": {
+    "grid": [
+      "1111111111111111",
+      "1111111111111111",
+      "1111111111111111",
+      "1111111111111111",
+      "1111111111111111",
+      "1111110011111111",
+      "1111100011111111",
+      "1111100011111111",
+      "1111100011111111",
+      "1111100011111100",
+      "1111111111111000",
+      "1111100011111000",
+      "1111000000111000",
+      "1111000000001000",
+      "1110000000001000",
+      "1110000000000000"
+    ],
+    "doors": [
+      {
+        "buildingId": "barn",
+        "x": 542.0,
+        "y": 366.0,
+        "cell": {
+          "col": 8,
+          "row": 5
+        }
+      },
+      {
+        "buildingId": "market",
+        "x": 121.0,
+        "y": 537.0,
+        "cell": {
+          "col": 1,
+          "row": 8
+        }
+      },
+      {
+        "buildingId": "orchard",
+        "x": 834.0,
+        "y": 348.0,
+        "cell": {
+          "col": 13,
+          "row": 5
+        }
+      },
+      {
+        "buildingId": "cornCrib",
+        "x": 627.0,
+        "y": 701.0,
+        "cell": {
+          "col": 9,
+          "row": 10
+        }
+      },
+      {
+        "buildingId": "pumpkinPatch",
+        "x": 814.0,
+        "y": 842.0,
+        "cell": {
+          "col": 12,
+          "row": 13
+        }
+      },
+      {
+        "buildingId": "hayLoft",
+        "x": 602.0,
+        "y": 139.0,
+        "cell": {
+          "col": 9,
+          "row": 2
+        }
+      }
+    ],
+    "spawn": {
+      "col": 5,
+      "row": 10
+    }
+  },
+  "fromWarmPool": false
+}

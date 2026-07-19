@@ -1,0 +1,502 @@
+{
+  "id": "Kgo4d31zD9kv1nANmRLep",
+  "idea": "a space station on moon",
+  "createdAt": "2026-07-16T13:45:21.281036+00:00",
+  "status": "playable",
+  "stages": {
+    "bible": "done",
+    "street": "done",
+    "outline": "done",
+    "hotspots": "done",
+    "character": "done",
+    "npc_openers": "done",
+    "tts": "done",
+    "room_bridge": "done",
+    "room_greenhouse": "done",
+    "room_cafe": "done"
+  },
+  "bible": {
+    "title": "Oink Oink Lost: Moon Station Muddle",
+    "setting": {
+      "name": "Moon Station",
+      "description": "A cozy space station that loops around the moon like a silver hug. Wide windows show the cratered moon outside, and every room is full of soft hums, round doors, and friendly robot pings.",
+      "decorations": [
+        "glowing control panels",
+        "floating dust sparkles in low gravity",
+        "round porthole windows",
+        "tubing and rails along the walls",
+        "soft landing pads on the floor"
+      ]
+    },
+    "player": {
+      "description": "Piglet, a tiny baby pig in a snug space suit with a bubble helmet and sleepy rosy cheeks.",
+      "accessory": "A small star-shaped badge on the suit"
+    },
+    "narratorIntro": "Piglet got a little turned around on the moon station. Three friendly neighbors have clues, and Mama Pig is waiting somewhere cozy inside the station.",
+    "buildings": [
+      {
+        "id": "bridge",
+        "name": "Command Bridge",
+        "exteriorDescription": "A bright silver doorway with blinking lights and a wide window looking out over the moon.",
+        "sizeHint": "large",
+        "isEnterable": true,
+        "interiorDescription": "A curved control room with screens, buttons, and a captain chair that swivels slowly.",
+        "npcId": "captain_owl"
+      },
+      {
+        "id": "greenhouse",
+        "name": "Moon Greenhouse",
+        "exteriorDescription": "A clear domed room with leafy shapes waving behind the glass and a little mist on the panels.",
+        "sizeHint": "medium",
+        "isEnterable": true,
+        "interiorDescription": "A warm plant room with rows of tiny moon tomatoes, hanging vines, and water beads on the leaves.",
+        "npcId": "robot_rabbit"
+      },
+      {
+        "id": "cafe",
+        "name": "Comet Caf\u00e9",
+        "exteriorDescription": "A rounded hatch with a glowing cup sign and a sweet smell of toast drifting out.",
+        "sizeHint": "large",
+        "isEnterable": true,
+        "interiorDescription": "A cheerful snack room with sticky buns, juice pods, and a shiny counter with stools.",
+        "npcId": "chef_cat"
+      },
+      {
+        "id": "sleep_pods",
+        "name": "Sleep Pod Nook",
+        "exteriorDescription": "A quiet hall of round blue pod doors, all softly lit like tiny moons.",
+        "sizeHint": "large",
+        "isEnterable": false,
+        "interiorDescription": null,
+        "npcId": null
+      },
+      {
+        "id": "airlock",
+        "name": "Airlock Bay",
+        "exteriorDescription": "A sturdy circular chamber with thick doors and warning stripes that glow gently.",
+        "sizeHint": "medium",
+        "isEnterable": false,
+        "interiorDescription": null,
+        "npcId": null
+      },
+      {
+        "id": "storage",
+        "name": "Supply Locker",
+        "exteriorDescription": "A boxy storage module with stacked crates and labeled bins on the wall.",
+        "sizeHint": "small",
+        "isEnterable": false,
+        "interiorDescription": null,
+        "npcId": null
+      }
+    ],
+    "npcs": [
+      {
+        "id": "captain_owl",
+        "name": "Captain Hoot",
+        "species": "owl",
+        "appearance": "A round white owl in a tiny captain coat with golden buttons and a neat map pinned to the wall.",
+        "personality": "Calm, wise, and a little funny.",
+        "roomPosition": "center",
+        "ttsVoice": "cedar",
+        "lines": {
+          "greeting": "Hoo-hoo! Welcome aboard, little explorer. You look like you're searching for someone.",
+          "hint": "I am sure Mama did not stop at Command Bridge.",
+          "idle": "Hoo hoo, the station hums so nicely."
+        },
+        "conversation": {
+          "speechStyle": "short and steady",
+          "favoriteTopic": "star maps",
+          "smallTalkFacts": [
+            "The bridge watches the whole moon station.",
+            "Buttons on the console glow blue and gold.",
+            "Captain Hoot likes neat lines on maps."
+          ],
+          "openingChoices": [
+            "Have you seen my Mama?",
+            "Tell me about the star maps.",
+            "Which button is your favorite?"
+          ],
+          "clueLeadIn": "I can point you the right way.",
+          "animalSound": "Hoo"
+        }
+      },
+      {
+        "id": "robot_rabbit",
+        "name": "Bun-Bit",
+        "species": "rabbit robot",
+        "appearance": "A friendly white robot rabbit with green ear lights and tiny tool paws.",
+        "personality": "Helpful, bouncy, and precise.",
+        "roomPosition": "left",
+        "ttsVoice": "marin",
+        "lines": {
+          "greeting": "Boop-boop! Hello, Piglet. My scanners say you could use a friendly helper.",
+          "hint": "I am sure Mama did not stop at Moon Greenhouse.",
+          "idle": "Boop boop, plants love tidy water."
+        },
+        "conversation": {
+          "speechStyle": "bouncy and clear",
+          "favoriteTopic": "plants",
+          "smallTalkFacts": [
+            "The greenhouse grows moon tomatoes.",
+            "Water floats in little shiny beads here.",
+            "Bun-Bit trims leaves with tiny tool paws."
+          ],
+          "openingChoices": [
+            "Have you seen my Mama?",
+            "Tell me about the moon tomatoes.",
+            "How do the water beads float?"
+          ],
+          "clueLeadIn": "I noticed something useful.",
+          "animalSound": "Boop"
+        }
+      },
+      {
+        "id": "chef_cat",
+        "name": "Mira",
+        "species": "cat",
+        "appearance": "A fluffy gray cat in a striped apron with flour on her whiskers and a spoon tucked in her pocket.",
+        "personality": "Cheerful, chatty, and proud of snacks.",
+        "roomPosition": "right",
+        "ttsVoice": "coral",
+        "lines": {
+          "greeting": "Meow! Hello, little star. Come in\u2014the buns are warm and I'm all ears.",
+          "hint": "I am sure Mama did not stop at Supply Locker.",
+          "idle": "Meow, the buns are puffing up nicely."
+        },
+        "conversation": {
+          "speechStyle": "chatty and warm",
+          "favoriteTopic": "snacks",
+          "smallTalkFacts": [
+            "The caf\u00e9 has sticky buns and juice pods.",
+            "The counter shines like a little rocket wing.",
+            "Mira likes to stack cookies in neat circles."
+          ],
+          "openingChoices": [
+            "Have you seen my Mama?",
+            "Tell me about the sticky buns.",
+            "What's your favorite space snack?"
+          ],
+          "clueLeadIn": "I saw where she waddled.",
+          "animalSound": "Meow"
+        }
+      }
+    ],
+    "hints": [
+      {
+        "id": "h1",
+        "npcId": "captain_owl",
+        "kind": "attribute",
+        "text": "I am sure Mama did not stop at Command Bridge.",
+        "eliminatesLocationIds": [
+          "bridge"
+        ]
+      },
+      {
+        "id": "h2",
+        "npcId": "robot_rabbit",
+        "kind": "direction",
+        "text": "I am sure Mama did not stop at Moon Greenhouse.",
+        "eliminatesLocationIds": [
+          "greenhouse"
+        ]
+      },
+      {
+        "id": "h3",
+        "npcId": "chef_cat",
+        "kind": "object",
+        "text": "I am sure Mama did not stop at Supply Locker.",
+        "eliminatesLocationIds": [
+          "storage"
+        ]
+      }
+    ],
+    "candidateLocations": [
+      {
+        "id": "bridge",
+        "name": "Command Bridge",
+        "emoji": "\ud83d\udef0\ufe0f",
+        "description": "A glowing control room with big moon views, buttons, and a captain chair.",
+        "clueFacts": {
+          "attribute": "Mama went somewhere that smells like cool metal.",
+          "direction": "Mama went somewhere on the west side of the station.",
+          "object": "Mama went somewhere with a map wall."
+        }
+      },
+      {
+        "id": "greenhouse",
+        "name": "Moon Greenhouse",
+        "emoji": "\ud83c\udf31",
+        "description": "A warm dome full of tiny plants, mist, and floating water beads.",
+        "clueFacts": {
+          "attribute": "Mama went somewhere that smells like warm bread.",
+          "direction": "Mama went somewhere on the north side of the station.",
+          "object": "Mama went somewhere with a leafy plant rack."
+        }
+      },
+      {
+        "id": "cafe",
+        "name": "Comet Caf\u00e9",
+        "emoji": "\u2615",
+        "description": "A cozy snack room with buns, juice pods, and a shiny counter.",
+        "clueFacts": {
+          "attribute": "Mama went somewhere that smells like warm bread.",
+          "direction": "Mama went somewhere on the east side of the station.",
+          "object": "Mama went somewhere with a shiny snack counter."
+        }
+      },
+      {
+        "id": "storage",
+        "name": "Supply Locker",
+        "emoji": "\ud83d\udce6",
+        "description": "A tidy locker room with crates, bins, and labeled supplies.",
+        "clueFacts": {
+          "attribute": "Mama went somewhere that smells like cool metal.",
+          "direction": "Mama went somewhere on the south side of the station.",
+          "object": "Mama went somewhere with a crate stack."
+        }
+      }
+    ],
+    "finalLocationId": "cafe",
+    "finalLocationBuildingId": "cafe",
+    "reunionLine": "Mama Pig is here! She wraps Piglet in a gentle hug and says, 'There you are, my little star.'",
+    "verification": "Each clue rules out one wrong place; only Comet Caf\u00e9 remains.",
+    "visualDirection": {
+      "layout": "interior_hub",
+      "architecture": "A circular moon station concourse with connected rooms around one central hallway, round hatch doors, thick portholes, and curved metal walls.",
+      "palette": [
+        "silver",
+        "navy",
+        "soft teal",
+        "warm amber",
+        "cream"
+      ],
+      "lighting": "Gentle glowing panels, soft amber caf\u00e9 light, and cool moonlight spilling through windows.",
+      "atmosphere": "Cozy, quiet, and mildly mysterious in a friendly way, like a bedtime adventure in space.",
+      "walkableSurface": "Smooth metal floors with rubbery floor strips and soft round mats at doorways.",
+      "imageStyle": "Child-friendly storybook illustration with clean shapes, soft edges, and clear room-to-room layout.",
+      "avoid": [
+        "dark horror shadows",
+        "gore",
+        "damage or broken glass",
+        "threatening faces",
+        "messy clutter that blocks paths",
+        "realistic danger"
+      ]
+    }
+  },
+  "assets": {
+    "streetUrl": "/assets/games/Kgo4d31zD9kv1nANmRLep/street.png",
+    "outlineUrl": "/assets/games/Kgo4d31zD9kv1nANmRLep/outline.png",
+    "characterFrontUrl": "/assets/games/Kgo4d31zD9kv1nANmRLep/char_front.png",
+    "characterSideUrl": "/assets/games/Kgo4d31zD9kv1nANmRLep/char_side.png",
+    "rooms": {
+      "bridge": {
+        "imageUrl": "/assets/games/Kgo4d31zD9kv1nANmRLep/room_bridge.png",
+        "annotation": {
+          "npcBox": {
+            "x": 114.0,
+            "y": 516.0,
+            "w": 230.0,
+            "h": 359.0
+          },
+          "exit": {
+            "x": 509.0,
+            "y": 1000.0
+          }
+        }
+      },
+      "greenhouse": {
+        "imageUrl": "/assets/games/Kgo4d31zD9kv1nANmRLep/room_greenhouse.png",
+        "annotation": {
+          "npcBox": {
+            "x": 228.0,
+            "y": 422.0,
+            "w": 164.0,
+            "h": 411.0
+          },
+          "exit": {
+            "x": 515.0,
+            "y": 942.0
+          }
+        }
+      },
+      "cafe": {
+        "imageUrl": "/assets/games/Kgo4d31zD9kv1nANmRLep/room_cafe.png",
+        "annotation": {
+          "npcBox": {
+            "x": 741.0,
+            "y": 334.0,
+            "w": 211.0,
+            "h": 451.0
+          },
+          "exit": {
+            "x": 606.0,
+            "y": 876.0
+          }
+        }
+      }
+    },
+    "audio": {
+      "npc_captain_owl.hint": "/assets/games/Kgo4d31zD9kv1nANmRLep/audio/npc_captain_owl.hint.mp3",
+      "npc_chef_cat.idle": "/assets/games/Kgo4d31zD9kv1nANmRLep/audio/npc_chef_cat.idle.mp3",
+      "npc_captain_owl.idle": "/assets/games/Kgo4d31zD9kv1nANmRLep/audio/npc_captain_owl.idle.mp3",
+      "npc_chef_cat.hint": "/assets/games/Kgo4d31zD9kv1nANmRLep/audio/npc_chef_cat.hint.mp3",
+      "npc_robot_rabbit.hint": "/assets/games/Kgo4d31zD9kv1nANmRLep/audio/npc_robot_rabbit.hint.mp3",
+      "narrator.allHints": "/assets/games/Kgo4d31zD9kv1nANmRLep/audio/narrator.allHints.mp3",
+      "narrator.reunion": "/assets/games/Kgo4d31zD9kv1nANmRLep/audio/narrator.reunion.mp3",
+      "narrator.intro": "/assets/games/Kgo4d31zD9kv1nANmRLep/audio/narrator.intro.mp3",
+      "npc_robot_rabbit.idle": "/assets/games/Kgo4d31zD9kv1nANmRLep/audio/npc_robot_rabbit.idle.mp3",
+      "building_sleep_pods.look": "/assets/games/Kgo4d31zD9kv1nANmRLep/audio/building_sleep_pods.look.mp3",
+      "building_storage.look": "/assets/games/Kgo4d31zD9kv1nANmRLep/audio/building_storage.look.mp3",
+      "building_airlock.look": "/assets/games/Kgo4d31zD9kv1nANmRLep/audio/building_airlock.look.mp3",
+      "npc_captain_owl.greeting": "/assets/games/Kgo4d31zD9kv1nANmRLep/audio/opener_captain_owl_4628431abe2913d2.mp3",
+      "npc_robot_rabbit.greeting": "/assets/games/Kgo4d31zD9kv1nANmRLep/audio/opener_robot_rabbit_16b8a04f60a03d28.mp3",
+      "npc_chef_cat.greeting": "/assets/games/Kgo4d31zD9kv1nANmRLep/audio/opener_chef_cat_cb9d109b313009b6.mp3"
+    },
+    "npcOpeners": {
+      "chef_cat": {
+        "reply": "Meow! Hello, little star. Come in\u2014the buns are warm and I'm all ears.",
+        "suggestedReplies": [
+          {
+            "text": "Have you seen my Mama?",
+            "intent": "ask_mama"
+          },
+          {
+            "text": "Tell me about the sticky buns.",
+            "intent": "small_talk"
+          },
+          {
+            "text": "What's your favorite space snack?",
+            "intent": "small_talk"
+          }
+        ],
+        "mood": "cheerful",
+        "conversationComplete": false,
+        "audioUrl": "/assets/games/Kgo4d31zD9kv1nANmRLep/audio/opener_chef_cat_cb9d109b313009b6.mp3"
+      },
+      "captain_owl": {
+        "reply": "Hoo-hoo! Welcome aboard, little explorer. You look like you're searching for someone.",
+        "suggestedReplies": [
+          {
+            "text": "Have you seen my Mama?",
+            "intent": "ask_mama"
+          },
+          {
+            "text": "Tell me about the star maps.",
+            "intent": "small_talk"
+          },
+          {
+            "text": "Which button is your favorite?",
+            "intent": "small_talk"
+          }
+        ],
+        "mood": "cheerful",
+        "conversationComplete": false,
+        "audioUrl": "/assets/games/Kgo4d31zD9kv1nANmRLep/audio/opener_captain_owl_4628431abe2913d2.mp3"
+      },
+      "robot_rabbit": {
+        "reply": "Boop-boop! Hello, Piglet. My scanners say you could use a friendly helper.",
+        "suggestedReplies": [
+          {
+            "text": "Have you seen my Mama?",
+            "intent": "ask_mama"
+          },
+          {
+            "text": "Tell me about the moon tomatoes.",
+            "intent": "small_talk"
+          },
+          {
+            "text": "How do the water beads float?",
+            "intent": "small_talk"
+          }
+        ],
+        "mood": "cheerful",
+        "conversationComplete": false,
+        "audioUrl": "/assets/games/Kgo4d31zD9kv1nANmRLep/audio/opener_robot_rabbit_16b8a04f60a03d28.mp3"
+      }
+    },
+    "reunionPhotoUrl": "/assets/games/Kgo4d31zD9kv1nANmRLep/reunion.png"
+  },
+  "annotation": {
+    "grid": [
+      "0000000000000000",
+      "0000000000000000",
+      "0000000000000000",
+      "0000001000000000",
+      "0000001000000000",
+      "0000101000000000",
+      "0000101000000000",
+      "0000101000000000",
+      "0000111111111000",
+      "1111111111111111",
+      "1111111111111111",
+      "1111111111111111",
+      "1111111111111111",
+      "1111111111111111",
+      "1111111111111111",
+      "1111111111111111"
+    ],
+    "doors": [
+      {
+        "buildingId": "bridge",
+        "x": 423.0,
+        "y": 215.0,
+        "cell": {
+          "col": 6,
+          "row": 3
+        }
+      },
+      {
+        "buildingId": "greenhouse",
+        "x": 319.0,
+        "y": 724.0,
+        "cell": {
+          "col": 4,
+          "row": 11
+        }
+      },
+      {
+        "buildingId": "cafe",
+        "x": 740.0,
+        "y": 752.0,
+        "cell": {
+          "col": 11,
+          "row": 11
+        }
+      },
+      {
+        "buildingId": "sleep_pods",
+        "x": 287.0,
+        "y": 353.0,
+        "cell": {
+          "col": 4,
+          "row": 5
+        }
+      },
+      {
+        "buildingId": "airlock",
+        "x": 796.0,
+        "y": 610.0,
+        "cell": {
+          "col": 12,
+          "row": 9
+        }
+      },
+      {
+        "buildingId": "storage",
+        "x": 311.0,
+        "y": 469.0,
+        "cell": {
+          "col": 4,
+          "row": 7
+        }
+      }
+    ],
+    "spawn": {
+      "col": 8,
+      "row": 8
+    }
+  },
+  "fromWarmPool": false,
+  "cozyVisuals": false
+}
