@@ -1,6 +1,6 @@
-# Oink Oink Lost
+# Oink Oink Lost - Game
 
-An AI-powered storybook adventure where a little lost Piglet follows three friendly clues to find Mama.
+An AI-powered storybook adventure game where a little lost Piglet explore and interact with dynamically generated world and NPCs to get clues and find Mama.
 
 Play online at [oinkoink.fun](https://oinkoink.fun).
 
